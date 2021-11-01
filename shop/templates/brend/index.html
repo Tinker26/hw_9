@@ -1,0 +1,47 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+{% for category, products in products_by_categories.items %}
+    <section>
+        <h2>{{category}}</h2>
+		{% for p in products %}
+        <div class="container">
+		
+				<div id="DIV_1">
+					<div id="DIV_2">
+						<a href="https://outlas.uz/uz/men/product/chernyj-kletchatye-bryuki-dzhoggery-mad4081-8168" id="A_3"><img alt="Erkaklar uchun katakli shim Mad4081" src="{{p.image}}" id="IMG_4" /></a>
+					</div>
+					<div id="DIV_5">
+					<a href="https://outlas.uz/uz/men/brands/madmext" id="A_6"></a>
+						<h5 id="H5_7">
+							{{p.name}}
+						</h5><a href="https://outlas.uz/uz/men/product/chernyj-kletchatye-bryuki-dzhoggery-mad4081-8168" id="A_8"></a>
+						<h5 id="H5_9">
+						</h5>
+						<h4 id="H4_10">
+						{{p.price}}
+						</h4>
+						<div id="DIV_11">
+						<div id="DIV_12">
+								<h5 id="H5_13">
+								{{p.old_price}} UZS
+							</h5>
+							<!---->
+			
+							</div>
+							<div id="DIV_14">
+							<!---->
+			
+							</div>
+						</div>
+					</div>
+			</div>	
+			
+	</div>
+		{% endfor %}
+    </section>
+    {% endfor %}
+{% endblock %}
